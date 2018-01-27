@@ -22,4 +22,4 @@ class PigLatinizer
   #end.join(" ")
 end
 
-PigLatinizer.new.piglatinize("hot")
+puts PigLatinizer.new.piglatinize("pork")
