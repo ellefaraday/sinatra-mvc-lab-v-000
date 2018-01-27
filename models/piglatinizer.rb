@@ -4,7 +4,7 @@ class PigLatinizer
   def piglatinize(word)
     word_arr = word.split(//)
     vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"]
-
+    binding.pry
     if vowels.include?(word_arr[0])
       word_arr << "way"
     else
