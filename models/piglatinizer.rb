@@ -8,7 +8,7 @@ class PigLatinizer
       word_arr << "way"
     else
       i = 0
-      while vowels.include?(word_arr[i]) == false do
+      while vowels.include?(word_arr[i]) == false || i == word_arr.length -1 do
         word_arr << word_arr.shift
         i += 1
       end
