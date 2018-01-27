@@ -3,12 +3,13 @@ class PigLatinizer
 
   def piglatinize(word)
     word_arr = word.split(//)
+    vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"]
 
-    if !word_arr[0].scan(/[AEIOUaeiou]/).empty?
+    if vowels.include?(word_arr[0])
       word_arr << "way"
     else
       i = 0
-      while word_arr[i].scan(/[AEIOUaeiou]/) == [] do
+      while !vowels.include?(word_arr[i])
         word_arr << word_arr.shift
         i += 1
       end
