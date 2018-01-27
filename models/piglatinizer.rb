@@ -17,6 +17,21 @@ class PigLatinizer
     word_arr.join
   end
 
+  def piglatinize(word)
+    word_arr = word.split(//)
+    if word_arr[0].scan(/[AEIOUaeiou]/)
+      word_arr << "way"
+    else
+      i = 0
+      while vowels.include?(word_arr[i]) == false || i == word_arr.length do
+        word_arr << word_arr.shift
+        i += 1
+      end
+      word_arr << "ay"
+    end
+    word_arr.join
+  end
+
   #text_arr = text.split(" ")
   #text_arr.collect do |word|
   #end.join(" ")
