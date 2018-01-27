@@ -8,7 +8,6 @@ class PigLatinizer
       word_arr << "way"
     else
       i = 0
-
       while word_arr[i].scan(/[AEIOUaeiou]/).empty? do
         word_arr << word_arr.shift
         i += 1
