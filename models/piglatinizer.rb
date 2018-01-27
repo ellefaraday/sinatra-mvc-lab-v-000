@@ -9,6 +9,7 @@ class PigLatinizer
     else
       i = 0
       while vowels.include?(word_arr[i]) == false && i != word_arr.length do
+        binding.pry
         word_arr << word_arr.shift
         i += 1
       end
